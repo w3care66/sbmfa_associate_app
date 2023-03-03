@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.associate.sbmfa.Fragment.InvestmentsManagement.InvestmentPlanRegister3Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/investments_management_plan"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/tools_bar_text"
+            tools:ignore="UseAppTint,VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="2dp"
+            android:src="@drawable/filter"
+            android:tint="@color/colorAccent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VectorDrawableCompat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="First Nominee"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView530"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="First Name*"
+                android:textColor="@color/tools_bar_text"
+                app:layout_constraintEnd_toEndOf="@+id/textView55"
+                app:layout_constraintStart_toStartOf="@+id/textView55"
+                app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+
+            <EditText
+                android:id="@+id/editTextTextPersonName20"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bottom_line_shape"
+                android:ems="10"
+                android:textColor="@color/tools_bar_text"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textView530"
+                app:layout_constraintStart_toStartOf="@+id/textView530"
+                app:layout_constraintTop_toBottomOf="@+id/textView530" />
+
+            <LinearLayout
+                android:id="@+id/line6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bottom_line_shape"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName20"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName20"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20">
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/spiner_icon" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView531"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nominee DOB*"
+                android:textColor="@color/tools_bar_text"
+                app:layout_constraintEnd_toEndOf="@+id/line6"
+                app:layout_constraintStart_toStartOf="@+id/line6"
+                app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+
+            <TextView
+                android:textColor="@color/tools_bar_text"
+                android:id="@+id/editTextTextPersonName21"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bottom_line_shape"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textView531"
+                app:layout_constraintStart_toStartOf="@+id/textView531"
+                app:layout_constraintTop_toBottomOf="@+id/textView531" />
+
+
+            <TextView
+                android:id="@+id/textView532"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Age"
+                android:textColor="@color/tools_bar_text"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName21"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName21"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+
+
+            <EditText
+                android:textColor="@color/tools_bar_text"
+                android:id="@+id/editTextTextPersonName22"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bottom_line_shape"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textView532"
+                app:layout_constraintStart_toStartOf="@+id/textView532"
+                app:layout_constraintTop_toBottomOf="@+id/textView532" />
+
+
+            <TextView
+                android:id="@+id/textView533"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                android:textColor="@color/tools_bar_text"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName22"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName22"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/radioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                app:layout_constraintEnd_toEndOf="@+id/textView533"
+                app:layout_constraintStart_toStartOf="@+id/textView533"
+                app:layout_constraintTop_toBottomOf="@+id/textView533" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                app:layout_constraintEnd_toEndOf="@+id/radioButton"
+                app:layout_constraintStart_toStartOf="@+id/radioButton"
+                app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+
+            <TextView
+                android:textColor="@color/tools_bar_text"
+                android:id="@+id/textView56"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Percentage"
+                app:layout_constraintEnd_toEndOf="@+id/radioButton2"
+                app:layout_constraintStart_toStartOf="@+id/radioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+
+
+            <EditText
+                android:textColor="@color/tools_bar_text"
+                android:id="@+id/editTextTextPersonName221"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bottom_line_shape"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/textView56"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+            <TextView
+                android:textColor="@color/tools_bar_text"
+                android:id="@+id/textView57"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Second Nominee"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName221"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName221"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName221" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/login_button_shape"
+
+                android:text="Add Nominee"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Submit"
+                android:background="@drawable/login_button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="@+id/textView57"
+                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintTop_toTopOf="@+id/button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

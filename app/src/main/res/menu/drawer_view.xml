@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Profile" />
+
+<!--        <item-->
+<!--            android:id="@+id/loan_payment"-->
+<!--            android:icon="@drawable/ic_drawer_loan"-->
+<!--            android:scrollHorizontally="false"-->
+<!--            android:ellipsize="none"-->
+<!--            android:title="@string/dwr_loan_payment" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/grouploan_payment"-->
+<!--            android:icon="@drawable/ic_group_loan"-->
+<!--            android:scrollHorizontally="false"-->
+<!--            android:ellipsize="none"-->
+<!--            android:title="@string/dwr_group_loan_payment" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/renewal_payment"-->
+<!--            android:icon="@drawable/ic_drawer_renewal"-->
+<!--            android:scrollHorizontally="false"-->
+<!--            android:ellipsize="none"-->
+<!--            android:title="@string/dwr_renewal_payment"/>-->
+
+<!--        <item-->
+<!--            android:id="@+id/investment_registration"-->
+<!--            android:icon="@drawable/ic_drawer_renewal"-->
+<!--            android:scrollHorizontally="false"-->
+<!--            android:ellipsize="none"-->
+<!--            android:title="@string/dwr_invest_register"/>-->
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:scrollHorizontally="false"
+            android:ellipsize="none"
+            android:title="Logout" />
+       <!-- <item
+            android:id="@+id/jobAlert"
+            android:icon="@drawable/job_alert"
+            android:title="@string/title_required" />
+        <item
+          android:id="@+id/youtube"
+          android:icon="@drawable/ic_play_circle_filled_black_24dp"
+          android:title="@string/youtbue" />
+        <item
+            android:id="@+id/result"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="@string/all_results" />-->
+    </group>
+<!--
+    <group android:checkableBehavior="all"
+        >
+        <item android:title="@string/information"
+            >
+            <menu>
+                <item
+                    android:id="@+id/our_team"
+                    android:icon="@drawable/teams"
+                    android:title="@string/title_ourteam" />
+                <item
+                    android:id="@+id/about_nav"
+                    android:icon="@drawable/about"
+                    android:title="@string/title_about" />
+
+                <item
+                    android:id="@+id/contactus"
+                    android:icon="@drawable/contact_us"
+                    android:title="@string/title_contactus" />
+
+                <item
+                    android:id="@+id/bottom_lanuage"
+                    android:icon="@drawable/ic_language_black_24dp"
+                    android:title="@string/Lanuage" />
+
+                <item
+                    android:id="@+id/bottom_logout"
+                    android:icon="@drawable/logout"
+                    android:title="@string/title_logout" />
+            </menu>
+        </item>
+    </group>
+-->
+</menu>

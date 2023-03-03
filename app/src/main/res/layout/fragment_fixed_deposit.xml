@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.associate.sbmfa.Fragment.InvestmentsManagement.InvestmentPlanRegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Fixed Deposit"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/colorAccent"
+            tools:ignore="UseAppTint,VectorDrawableCompat" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/con2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/form_card_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView52">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="vertical">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Form Number*" />
+                    <EditText
+                        android:id="@+id/FormNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Form Number"></EditText>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deposit Amount" />
+                    <EditText
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:id="@+id/DepositAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Deposit Amount"></EditText>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Mode*" />
+                    <TextView
+                        android:background="@drawable/bottom_line_shape"
+                        android:id="@+id/Daughtername"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="SSB"></TextView>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tenure*" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_line_shape"
+                        >
+                        <Spinner
+                            android:id="@+id/Tenure"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textSize="18dp"
+                            android:hint="Date of Birth"></Spinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:id="@+id/amountlv"
+                    android:visibility="gone"
+                    >
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Maturity Amount" />
+                    <TextView
+                        android:background="@drawable/bottom_line_shape"
+                        android:id="@+id/MaturityAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:layout_marginTop="5dp"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account Balance" />
+                    <TextView
+                        android:background="@drawable/bottom_line_shape_dash"
+                        android:id="@+id/AccountBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:layout_marginTop="5dp"
+                        ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account Number" />
+                    <TextView
+                        android:background="@drawable/bottom_line_shape_dash"
+                        android:id="@+id/AccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="16dp"
+                        android:layout_marginTop="5dp"
+                        ></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="First Nominee"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Yes"
+                app:layout_constraintBottom_toTopOf="@+id/textView55"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con2" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/form_card_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView55">
+
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/textView530"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Full Name*"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:textSize="14sp"
+                    android:id="@+id/editTextTextPersonName20"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bottom_line_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView530" />
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bottom_line_shape"
+                    android:paddingTop="2.4dp"
+                    android:paddingBottom="2.4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName20"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName20"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20">
+
+                    <Spinner
+                        android:id="@+id/spinner6"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spiner_icon" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/textView531"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Nominee DOB*"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/line6"
+                    app:layout_constraintStart_toStartOf="@+id/line6"
+                    app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+
+                <TextView
+                    android:textSize="14sp"
+                    android:id="@+id/editTextTextPersonName21"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bottom_line_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/textView531"
+                    app:layout_constraintStart_toStartOf="@+id/textView531"
+                    app:layout_constraintTop_toBottomOf="@+id/textView531" />
+
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/textView532"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Age"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName21"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName21"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+
+
+                <TextView
+
+                    android:textSize="14sp"
+                    android:id="@+id/editTextTextPersonName22"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bottom_line_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/textView532"
+                    app:layout_constraintStart_toStartOf="@+id/textView532"
+                    app:layout_constraintTop_toBottomOf="@+id/textView532" />
+
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/textView533"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Gender"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName22"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName22"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+
+                <RadioButton
+                    android:textSize="14sp"
+                    android:id="@+id/radioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Male"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"
+                    app:layout_constraintEnd_toEndOf="@+id/textView533"
+                    app:layout_constraintStart_toStartOf="@+id/textView533"
+                    app:layout_constraintTop_toBottomOf="@+id/textView533" />
+
+                <RadioButton
+                    android:textSize="14sp"
+                    android:id="@+id/radioButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"
+                    app:layout_constraintEnd_toEndOf="@+id/radioButton"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton"
+                    app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+
+                <TextView
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="14sp"
+                    android:id="@+id/textView56"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Percentage"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintEnd_toEndOf="@+id/radioButton2"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton2"
+                    app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+
+
+                <EditText
+                    android:textSize="14sp"
+                    android:id="@+id/editTextTextPersonName221"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bottom_line_shape"
+                    android:ems="10"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/tools_bar_text"                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView56"
+                    app:layout_constraintStart_toStartOf="@+id/textView56"
+                    app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="@color/tools_bar_text"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout11"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout11"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView57">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:background="@drawable/form_card_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView55">
+
+
+                    <EditText
+                        android:id="@+id/sfirstnameed"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/bottom_line_shape"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sfirstname" />
+
+
+                    <EditText
+                        android:id="@+id/Percentageed"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bottom_line_shape"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/sfirstnameed"
+                        app:layout_constraintStart_toStartOf="@+id/sfirstnameed"
+                        app:layout_constraintTop_toBottomOf="@+id/sfirstnameed" />
+
+                    <LinearLayout
+                        android:id="@+id/line66"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bottom_line_shape"
+                        android:paddingTop="2.4dp"
+                        android:paddingBottom="2.4dp"
+                        app:layout_constraintEnd_toEndOf="@+id/sfirstnameed"
+                        app:layout_constraintStart_toStartOf="@+id/sfirstnameed"
+                        app:layout_constraintTop_toBottomOf="@+id/sfirstnameed">
+
+                        <Spinner
+                            android:id="@+id/srelation"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/spiner_icon" />
+                    </LinearLayout>
+
+
+                    <RadioButton
+                        android:id="@+id/sradioButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Male"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView5sa33"
+                        app:layout_constraintStart_toStartOf="@+id/textView5sa33"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5sa33" />
+
+
+                    <RadioButton
+                        android:id="@+id/sradioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Female"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/sradioButton"
+                        app:layout_constraintStart_toStartOf="@+id/sradioButton"
+                        app:layout_constraintTop_toBottomOf="@+id/sradioButton" />
+
+                    <TextView
+                        android:id="@+id/textView575"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Second Nominee"
+                        android:textColor="@color/colorAccent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sfirstname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="Full Name*"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView575" />
+
+
+
+                    <TextView
+                        android:id="@+id/sdob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="Nominee DOB*"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/line66"
+                        app:layout_constraintStart_toStartOf="@+id/line66"
+                        app:layout_constraintTop_toBottomOf="@+id/line66" />
+
+
+                    <TextView
+                        android:id="@+id/sdobtv"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bottom_line_shape"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/sdob"
+                        app:layout_constraintStart_toStartOf="@+id/sdob"
+                        app:layout_constraintTop_toBottomOf="@+id/sdob" />
+
+                    <TextView
+                        android:id="@+id/sage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="Age"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/sdobtv"
+                        app:layout_constraintStart_toStartOf="@+id/sdobtv"
+                        app:layout_constraintTop_toBottomOf="@+id/sdobtv" />
+
+                    <TextView
+
+                        android:id="@+id/sagetv"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bottom_line_shape"
+                        android:ems="10"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/sage"
+                        app:layout_constraintStart_toStartOf="@+id/sage"
+                        app:layout_constraintTop_toBottomOf="@+id/sage" />
+
+                    <TextView
+                        android:id="@+id/textView5sa33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="Gender"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/sagetv"
+                        app:layout_constraintStart_toStartOf="@+id/sagetv"
+                        app:layout_constraintTop_toBottomOf="@+id/sagetv" />
+
+                    <TextView
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:textSize="14sp"
+                        android:id="@+id/textView56assa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Percentage"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@color/tools_bar_text"
+                        app:layout_constraintEnd_toEndOf="@+id/sradioButton2"
+                        app:layout_constraintStart_toStartOf="@+id/sradioButton2"
+                        app:layout_constraintTop_toBottomOf="@+id/sradioButton2" />
+
+                    <EditText
+                        android:id="@+id/sPercentage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:hint="Percentage"
+                        android:textColor="@color/tools_bar_text"
+                        android:textSize="14sp"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toEndOf="@+id/textView56assa"
+                        app:layout_constraintStart_toStartOf="@+id/textView56assa"
+                        app:layout_constraintTop_toBottomOf="@+id/textView56assa" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/login_button_shape"
+                android:text="Add Nominee"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/login_button_shape"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="@+id/textView57"
+                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintTop_toTopOf="@+id/button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

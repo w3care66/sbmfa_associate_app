@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/constraintLayout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_line_shape"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/AccountNumber"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Full Name : "
+            android:textColor="@color/tools_bar_text"/>
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editText_AccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:imeOptions="actionSend"
+            android:inputType="number"
+            android:gravity="end"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:background="#0000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/Name_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Dependent Type : "
+            android:textColor="@color/tools_bar_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+           android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="textPersonName"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/Amount_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Gender : "
+            android:textColor="@color/tools_bar_text"/>
+
+        <EditText
+            android:id="@+id/Amount"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="number"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/AssociateName_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Relation : "
+            android:textColor="@color/tools_bar_text"/>
+
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/AssociateName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="textPersonName"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/MaritalName_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Marital status : "
+            android:textColor="@color/tools_bar_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/Maritalstatus"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="textPersonName"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/LivingName_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Living with Associate : "
+            android:textColor="@color/tools_bar_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/LivingName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="textPersonName"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/incomeName_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Per month income"
+            android:textColor="@color/tools_bar_text"/>
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/month_income"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#0000"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="textPersonName"
+            android:textColor="@color/tools_bar_text"
+            android:textSize="14dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

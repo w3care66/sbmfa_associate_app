@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#0c60a8</color>
+    <color name="purple_500">#0c60a8</color>
+    <color name="purple_700">#0c60a8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="colorPrimary">#2699fb</color>
+    <color name="colorPrimaryDark">#2699fb</color>
+    <color name="colorAccent">#2699fb</color>
+    <color name="buttonbackground">#138808</color>
+    <color name="blacktextcolor">#000</color>
+    <color name="Whitetextcolor">#FFFFFF</color>
+    <color name="greentextcolor">#138808</color>
+    <color name="black">#000</color>
+    <color name="white">#ffffff</color>
+    <color name="pro_back">#e4e4e4</color>
+    <color name="lang_bg">#1549ae</color>
+    <color name="blue">#000080</color>
+    <color name="red">#F44336</color>
+    <color name="gary">#C5C5C5</color>
+    <color name="gary_dark">#9C9A9A</color>
+    <color name="bottommenu">#0c60a8</color>
+    <color name="blue_menu">#32528E</color>
+    <color name="card_table_header_color">#f0f8fe</color>
+    <color name="btncolor">#0c60a8</color>
+    <color name="text_color_gary">#9b9b9b</color>
+    <color name="text_color_gary1">#858181</color>
+    <color name="text_color_black">#000000</color>
+    <color name="tools_bar_text">#3a4555</color>
+
+    <color name="card_one">#01cd89</color>
+    <color name="card_two">#ff5949</color>
+    <color name="card_three">#ecac48</color>
+    <color name="card_four">#2f26d9</color>
+    <color name="card_five">#03A9F4</color>
+
+
+</resources>

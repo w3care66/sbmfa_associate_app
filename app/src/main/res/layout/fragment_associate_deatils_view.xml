@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.associate.sbmfa.Fragment.AssociateManagement.AssociateDeatilsViewFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/Associate_detail_view"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/colorAccent"
+            tools:ignore="UseAppTint,VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="2dp"
+            android:src="@drawable/filter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VectorDrawableCompat"
+            app:tint="@color/colorAccent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/profile_user"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/user_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:text=" "
+                        android:textColor="#4CAF50"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--            <TextView-->
+                    <!--                android:id="@+id/user_profile_short_bio"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_below="@+id/user_profile_name"-->
+                    <!--                android:layout_centerHorizontal="true"-->
+                    <!--                android:layout_marginTop="2dp"-->
+                    <!--                android:text="121121111531"-->
+                    <!--                android:textColor="#673AB7"-->
+                    <!--                android:textSize="14sp" />-->
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/mainCon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/profile_layout"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!--                <com.github.ybq.android.spinkit.SpinKitView-->
+                    <!--                    android:id="@+id/spin_kit"-->
+                    <!--                    style="@style/SpinKitView.Small.Circle"-->
+                    <!--                    android:layout_width="60dp"-->
+                    <!--                    android:layout_height="60dp"-->
+                    <!--                    android:layout_gravity="center"-->
+                    <!--                    android:background="#fff"-->
+                    <!--                    android:elevation="5dp"-->
+                    <!--                    android:padding="8dp"-->
+                    <!--                    app:SpinKit_Color="@color/colorPrimary" />-->
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="visible"
+                        android:id="@+id/cardView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_layout"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="0dp"
+
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="Associate Form Information"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintBottom_toTopOf="@+id/guar"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:id="@+id/guar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="w,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView13">
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/gomRegDateTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Form NO :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView34"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/form_id"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView34"
+                                        app:layout_constraintTop_toTopOf="@+id/gomRegDateTV" />
+
+                                    <TextView
+                                        android:id="@+id/textView34"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/form_id"
+                                        app:layout_constraintStart_toEndOf="@+id/gomRegDateTV"
+                                        app:layout_constraintTop_toTopOf="@+id/gomRegDateTV" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/gobranchCodeTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Join Date :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/JoiningDate"
+                                        app:layout_constraintStart_toEndOf="@+id/gobranchCodeTV"
+                                        app:layout_constraintTop_toTopOf="@+id/gobranchCodeTV" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/JoiningDate"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35"
+                                        app:layout_constraintTop_toTopOf="@+id/gobranchCodeTV" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/gobarnchNameTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Associate id :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/associate_id"
+                                        app:layout_constraintStart_toEndOf="@+id/gobarnchNameTV"
+                                        app:layout_constraintTop_toTopOf="@+id/gobarnchNameTV" />
+
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/associate_id"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37"
+                                        app:layout_constraintTop_toTopOf="@+id/gobarnchNameTV" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/goSectorNameTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Member id :-"
+                                        android:textAlignment="viewStart"                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView38"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView38"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/member_id"
+                                        app:layout_constraintStart_toEndOf="@+id/goSectorNameTV"
+                                        app:layout_constraintTop_toTopOf="@+id/goSectorNameTV" />
+
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/member_id"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView38"
+                                        app:layout_constraintTop_toTopOf="@+id/goSectorNameTV" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/goinvestmentplanTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Carder :-"
+                                        android:textAlignment="viewStart"                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView39"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView39"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/carder"
+                                        app:layout_constraintStart_toEndOf="@+id/goinvestmentplanTV"
+                                        app:layout_constraintTop_toTopOf="@+id/goinvestmentplanTV" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/carder"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView39"
+                                        app:layout_constraintTop_toTopOf="@+id/goinvestmentplanTV" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </LinearLayout>
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="visible"
+                        android:id="@+id/cardView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView1"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardView"
+                            android:layout_margin="2dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="0dp"
+
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            >
+                            <TextView
+                                android:id="@+id/textView113"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Personal Information"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:id="@+id/guar1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="w,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.6"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView113">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/first_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="First Name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/first_name"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gomRegDate"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/first_name"
+                                        app:layout_constraintTop_toTopOf="@+id/first_" />
+
+                                    <TextView
+                                        android:id="@+id/first_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gomRegDate"
+                                        app:layout_constraintStart_toEndOf="@+id/first_"
+                                        app:layout_constraintTop_toTopOf="@+id/first_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/last_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Last Name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/last_name"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/last_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gobranchCode"
+                                        app:layout_constraintStart_toEndOf="@+id/last_"
+                                        app:layout_constraintTop_toTopOf="@+id/last_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gobranchCode"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/last_name"
+                                        app:layout_constraintTop_toTopOf="@+id/last_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/email_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Email id :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView371"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView371"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gobarnchName"
+                                        app:layout_constraintStart_toEndOf="@+id/email_"
+                                        app:layout_constraintTop_toTopOf="@+id/email_" />
+
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gobarnchName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView371"
+                                        app:layout_constraintTop_toTopOf="@+id/email_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/Mobile_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Mobile No. :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView38_Mobile_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView38_Mobile_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gosectorname"
+                                        app:layout_constraintStart_toEndOf="@+id/Mobile_"
+                                        app:layout_constraintTop_toTopOf="@+id/Mobile_" />
+
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gosectorname"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView38_Mobile_"
+                                        app:layout_constraintTop_toTopOf="@+id/Mobile_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <!--
+                                                                <androidx.constraintlayout.widget.ConstraintLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content">
+
+                                                                    <TextView
+                                                                        android:id="@+id/dob_"
+                                                                        android:layout_width="0dp"
+                                                                        android:layout_height="wrap_content"
+                                                                         android:layout_marginStart="0dp"
+
+                                                                        android:layout_marginTop="10dp"
+                                                                        android:layout_marginEnd="8dp"
+                                                                        android:fontFamily="@font/opensans_regular"
+                                                                        android:text="DOB"
+                                                                        android:textAlignment="center"
+                                                                        android:textColor="@color/tools_bar_text"
+                                                                        android:textSize="14dp"
+                                                                        app:layout_constraintEnd_toStartOf="@+id/textView39dob_"
+                                                                        app:layout_constraintStart_toStartOf="parent"
+                                                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                                                    <TextView
+                                                                        android:id="@+id/textView39dob_"
+                                                                        android:layout_width="wrap_content"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:fontFamily="@font/opensans_bold"
+                                                                        android:text=""
+                                                                        android:textColor="@color/tools_bar_text"
+                                                                        app:layout_constraintEnd_toStartOf="@+id/gomemberid"
+                                                                        app:layout_constraintStart_toEndOf="@+id/dob_"
+                                                                        app:layout_constraintTop_toTopOf="@+id/dob_" />
+
+                                                                    <TextView
+                                                                        android:id="@+id/gomemberid"
+                                                                        android:layout_width="0dp"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_marginStart="8dp"
+                                                                        android:layout_marginEnd="0dp"
+
+                                                                        android:text=""
+                                                                        android:textAlignment="center"
+                                                                        android:textSize="14dp"
+                                                                        app:layout_constraintEnd_toEndOf="parent"
+                                                                        app:layout_constraintStart_toEndOf="@+id/textView39dob_"
+                                                                        app:layout_constraintTop_toTopOf="@+id/dob_" />
+
+
+                                                                </androidx.constraintlayout.widget.ConstraintLayout>
+                                -->
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/age_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="DOB :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView40age_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView40age_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gomemberName"
+                                        app:layout_constraintStart_toEndOf="@+id/age_"
+                                        app:layout_constraintTop_toTopOf="@+id/age_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gomemberName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView40age_"
+                                        app:layout_constraintTop_toTopOf="@+id/age_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/dob_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Age :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView40dob_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView40dob_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/dobName"
+                                        app:layout_constraintStart_toEndOf="@+id/dob_"
+                                        app:layout_constraintTop_toTopOf="@+id/dob_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/dobName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView40dob_"
+                                        app:layout_constraintTop_toTopOf="@+id/dob_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/gender_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Gender :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView41gender"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView41gender"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/goassociateId"
+                                        app:layout_constraintStart_toEndOf="@+id/gender_"
+                                        app:layout_constraintTop_toTopOf="@+id/gender_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/goassociateId"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView41gender"
+                                        app:layout_constraintTop_toTopOf="@+id/gender_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/accupations_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Occupations :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView42accupations_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView42accupations_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/goadharNumber"
+                                        app:layout_constraintStart_toEndOf="@+id/accupations_"
+                                        app:layout_constraintTop_toTopOf="@+id/accupations_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/goadharNumber"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView42accupations_"
+                                        app:layout_constraintTop_toTopOf="@+id/accupations_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/annual_income_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Annual income :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView43annual_income_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView43annual_income_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/gopenNumber"
+                                        app:layout_constraintStart_toEndOf="@+id/annual_income_"
+                                        app:layout_constraintTop_toTopOf="@+id/annual_income_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/gopenNumber"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView43annual_income_"
+                                        app:layout_constraintTop_toTopOf="@+id/annual_income_" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/status_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginTop="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Status :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44status_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView44status_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/goSeniorName"
+                                        app:layout_constraintStart_toEndOf="@+id/status_"
+                                        app:layout_constraintTop_toTopOf="@+id/status_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/goSeniorName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44status_"
+                                        app:layout_constraintTop_toTopOf="@+id/status_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/state_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="State :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44state_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/state_name" />
+
+                                    <TextView
+                                        android:id="@+id/textView44state_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/state_name"
+                                        app:layout_constraintStart_toEndOf="@+id/state_"
+                                        app:layout_constraintTop_toTopOf="@+id/state_" />
+
+                                    <TextView
+                                        android:id="@+id/state_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="10dp"
+
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44state_"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+                                    <TextView
+                                        android:textSize="14dp"
+                                        android:id="@+id/textView66"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Address:-"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView67"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"/>
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/textView67"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="@+id/state_name"
+                                        app:layout_constraintStart_toEndOf="@+id/textView66"
+                                        app:layout_constraintTop_toTopOf="@+id/textView66" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/district_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="District :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44district_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView44district_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/district__name"
+                                        app:layout_constraintStart_toEndOf="@+id/district_"
+                                        app:layout_constraintTop_toTopOf="@+id/district_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/district__name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44district_"
+                                        app:layout_constraintTop_toTopOf="@+id/district_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/city_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="City :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44city_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView44city_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/city___name"
+                                        app:layout_constraintStart_toEndOf="@+id/city_"
+                                        app:layout_constraintTop_toTopOf="@+id/city_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/city___name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44city_"
+                                        app:layout_constraintTop_toTopOf="@+id/city_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/village_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Village name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44village_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView44village_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/village_name"
+                                        app:layout_constraintStart_toEndOf="@+id/village_"
+                                        app:layout_constraintTop_toTopOf="@+id/village_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/village_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44village_"
+                                        app:layout_constraintTop_toTopOf="@+id/village_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/pincode_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Pin Code :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44pincode_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView44pincode_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/pincode__name"
+                                        app:layout_constraintStart_toEndOf="@+id/pincode_"
+                                        app:layout_constraintTop_toTopOf="@+id/pincode_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/pincode__name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView44pincode_"
+                                        app:layout_constraintTop_toTopOf="@+id/pincode_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1q3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView12"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_layout"
+                            android:layout_marginStart="0dp"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="0dp"
+
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/dsdsds"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Senior Details"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:id="@+id/guar3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="w,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dsdsds">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/senior_code_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Senior Code :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView34senior_code_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/senior_code_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView34senior_code_"
+                                        app:layout_constraintTop_toTopOf="@+id/senior_code_" />
+
+                                    <TextView
+                                        android:id="@+id/textView34senior_code_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/senior_code_name"
+                                        app:layout_constraintStart_toEndOf="@+id/senior_code_"
+                                        app:layout_constraintTop_toTopOf="@+id/senior_code_" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/name_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35name_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35name_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/name_name"
+                                        app:layout_constraintStart_toEndOf="@+id/name_"
+                                        app:layout_constraintTop_toTopOf="@+id/name_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/name_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35name_"
+                                        app:layout_constraintTop_toTopOf="@+id/name_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/mobile_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Mobile No. :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37mobile_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37mobile_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/mobile_no"
+                                        app:layout_constraintStart_toEndOf="@+id/mobile_"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_" />
+
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/mobile_no"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37mobile_"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/Cader_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Cader :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView38Cader_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:id="@+id/textView38Cader_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/Cader_namee"
+                                        app:layout_constraintStart_toEndOf="@+id/Cader_"
+                                        app:layout_constraintTop_toTopOf="@+id/Cader_" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/Cader_namee"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView38Cader_"
+                                        app:layout_constraintTop_toTopOf="@+id/Cader_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="visible"
+                        android:id="@+id/cardView1q34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView12"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_layout"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/dsdsdssd"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Guarantor Details"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:id="@+id/guar4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="w,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dsdsdssd">
+
+
+                                <TextView
+                                    android:id="@+id/full_name_2eq"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginStart="0dp"
+
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="1st Guarantor Detail"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/tools_bar_text"
+                                    android:textSize="16dp"
+                                    app:layout_constraintEnd_toStartOf="@+id/textView34full_name_1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/full_name_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Full Name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView34full_name_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/full_name_nam"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView34full_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/full_name_" />
+
+                                    <TextView
+                                        android:id="@+id/textView34full_name_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/full_name_nam"
+                                        app:layout_constraintStart_toEndOf="@+id/full_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/full_name_" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/mobile_no_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Mobile No. :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35mobile_no_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35mobile_no_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/name_name_mobile_no_"
+                                        app:layout_constraintStart_toEndOf="@+id/mobile_no_"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_no_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/name_name_mobile_no_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35mobile_no_"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_no_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/address_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Address :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37address_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37address_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/address__"
+                                        app:layout_constraintStart_toEndOf="@+id/address_"
+                                        app:layout_constraintTop_toTopOf="@+id/address_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/address__"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37address_"
+                                        app:layout_constraintTop_toTopOf="@+id/address_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <TextView
+
+                                    android:id="@+id/full_name_2e"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="2nd Guarantor Detail"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/tools_bar_text"
+                                    android:textSize="16dp"
+                                    app:layout_constraintEnd_toStartOf="@+id/textView34full_name_1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/full_name_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Full Name :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView34full_name_1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/full_name_nam1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:text="N/A"
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView34full_name_1"
+                                        app:layout_constraintTop_toTopOf="@+id/full_name_2" />
+
+                                    <TextView
+                                        android:id="@+id/textView34full_name_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/full_name_nam1"
+                                        app:layout_constraintStart_toEndOf="@+id/full_name_2"
+                                        app:layout_constraintTop_toTopOf="@+id/full_name_2" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/mobile_no_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Mobile No. :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35mobile_no_2"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35mobile_no_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/name_name_mobile_no_2"
+                                        app:layout_constraintStart_toEndOf="@+id/mobile_no_2"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_no_2" />
+
+                                    <TextView
+                                        android:id="@+id/name_name_mobile_no_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+
+                                        android:text="N/A"
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35mobile_no_2"
+                                        app:layout_constraintTop_toTopOf="@+id/mobile_no_2" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/address_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Address :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37address_2"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37address_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/address__2"
+                                        app:layout_constraintStart_toEndOf="@+id/address_2"
+                                        app:layout_constraintTop_toTopOf="@+id/address_2" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/address__2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:text="N/A"
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37address_2"
+                                        app:layout_constraintTop_toTopOf="@+id/address_2" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1q36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView12"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_layout"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="0dp"
+
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/dsdsdssdsd"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="ID Proof"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:id="@+id/guar5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="w,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dsdsdssdsd">
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/first_id_name_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="First Id Document type :-"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView34first_id_name_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/first_id_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView34first_id_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/first_id_name_" />
+                                    <TextView
+                                        android:id="@+id/textView34first_id_name_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/first_id_name"
+                                        app:layout_constraintStart_toEndOf="@+id/first_id_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/first_id_name_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/firstid_no_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="First Id No. :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35firstid_no_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35firstid_no_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/firstid_no"
+                                        app:layout_constraintStart_toEndOf="@+id/firstid_no_"
+                                        app:layout_constraintTop_toTopOf="@+id/firstid_no_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/firstid_no"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35firstid_no_"
+                                        app:layout_constraintTop_toTopOf="@+id/firstid_no_" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/firstid_add_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="First Address :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView35firstid_no_add"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <TextView
+                                        android:id="@+id/textView35firstid_no_add"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/firstid_add"
+                                        app:layout_constraintStart_toEndOf="@+id/firstid_add_"
+                                        app:layout_constraintTop_toTopOf="@+id/firstid_add_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/firstid_add"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView35firstid_no_add"
+                                        app:layout_constraintTop_toTopOf="@+id/firstid_add_" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/secound_id_type_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Second Id Document Type :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37secound_id_type_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37secound_id_type_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/secound_id_type"
+                                        app:layout_constraintStart_toEndOf="@+id/secound_id_type_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_type_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/secound_id_type"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37secound_id_type_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_type_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/secound_id_name_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                         android:layout_marginStart="0dp"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Second Id No :-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37secound_id_name_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37secound_id_name_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/secound_id_name"
+                                        app:layout_constraintStart_toEndOf="@+id/secound_id_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_name_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/secound_id_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37secound_id_name_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_name_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/secound_id_add_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Second Address:-"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/tools_bar_text"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView37secound_id_add_"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView37secound_id_add_"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensans_bold"
+                                        android:text=""
+                                        android:textColor="@color/tools_bar_text"
+                                        app:layout_constraintEnd_toStartOf="@+id/secound_id_add"
+                                        app:layout_constraintStart_toEndOf="@+id/secound_id_add_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_add_" />
+
+                                    <TextView
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:id="@+id/secound_id_add"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="0dp"
+
+                                        android:text=""
+                                        android:textAlignment="viewEnd"
+                                        android:textSize="14dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView37secound_id_add_"
+                                        app:layout_constraintTop_toTopOf="@+id/secound_id_add_" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1q36d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView12"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_layout"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="0dp"
+
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/sign"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Signature"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:src="@drawable/signnature_place"
+                                android:id="@+id/imageView29"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/sign"
+                                app:layout_constraintStart_toStartOf="@+id/sign"
+                                app:layout_constraintTop_toBottomOf="@+id/sign"
+                                />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1q35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/df"
+                        android:layout_margin="2dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <LinearLayout
+                            android:id="@+id/guar5d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/df"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="0dp"
+                                android:text="Details of Associate's dependents"
+                                android:textAlignment="viewStart"
+                                android:fontFamily="@font/opensans_regular"
+                                android:textStyle="bold"
+                                android:textColor="@color/tools_bar_text"
+                                android:textSize="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView37secound_id_name_"
+                                app:layout_constraintTop_toTopOf="@+id/secound_id_name_" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!--
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/cardView1q35"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/cardView12"
+                                            android:layout_margin="2dp"
+                                            android:layout_marginTop="10dp"
+                                            app:cardCornerRadius="10dp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <androidx.constraintlayout.widget.ConstraintLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/profile_layout"
+                                                android:layout_marginStart="5dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+
+                                                android:layout_marginBottom="5dp"
+                                                android:orientation="vertical"
+                                                android:padding="10dp">
+
+                                                <TextView
+                                                    android:id="@+id/sign"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/opensans_regular"
+                                                    android:text="Signature"
+                                                    android:textColor="@color/tools_bar_text"
+                                                    android:textSize="16dp"
+                                                    app:layout_constraintBottom_toTopOf="@+id/imageView27"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                                <ImageView
+                                                    android:src="@drawable/ic_baseline_add_24"
+                                                    android:scaleType="fitXY"
+                                                    android:id="@+id/imageView27"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginStart="24dp"
+                                                    android:layout_marginTop="16dp"
+                                                    android:layout_marginEnd="24dp"
+                                                    android:layout_marginBottom="16dp"
+                                                    app:layout_constraintBottom_toBottomOf="parent"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toBottomOf="@+id/sign"
+                                                     />
+
+
+                                            </androidx.constraintlayout.widget.ConstraintLayout>
+                                        </androidx.cardview.widget.CardView>
+                    -->
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

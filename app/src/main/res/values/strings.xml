@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">SBMFA ASSOCIATE APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="associate_management">Associate Management</string>
+    <string name="associate_ledger_management">Associate Ledger Management</string>
+    <string name="associate_details">Associate Details</string>
+    <string name="associate_name">Associate Name</string>
+    <string name="associate_code">Associate Code</string>
+    <string name="associate_cader">Associate Cader</string>
+    <string name="associate_branch_name">Associate Branch Name</string>
+    <string name="branch_code">Branch Code</string>
+    <string name="sector_name">Sector Name</string>
+    <string name="associate_image">Associate Image</string>
+    <string name="member_management">Member Management</string>
+    <string name="associateCommissiondetails">Associate Commission details</string>
+    <string name="assciate_collection">Associate Collection Details</string>
+    <string name="investments_management">Investments Management</string>
+    <string name="loan_ledger">Loan Ledger</string>
+    <string name="plan_ledger">Plan Ledger</string>
+    <string name="investments_management_plan">Investments Plan Register</string>
+    <string name="investments_management_plan_details">Investments Plan Details</string>
+    <string name="loan_managment">Loan Management</string>
+    <string name="loan_details">Loan Details</string>
+    <string name="loan_recovery">Loan Recovery</string>
+    <string name="report_managment">Report Management</string>
+    <string name="quota_business_report">QUOTA Business Report</string>
+    <string name="renewal_details">Renewal Details</string>
+    <string name="loan_recovery_Details">Loan Recovery Details</string>
+    <string name="transaction_detail">Transaction Details</string>
+    <string name="Associate_detail_view">Associate Detail View</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+
+
+    <string name="dwr_loan_payment">Loan EMI Payment</string>
+    <string name="dwr_group_loan_payment">Group Loan EMI Payment</string>
+    <string name="dwr_renewal_payment">Renewal Payment</string>
+    <string name="dwr_invest_register">Investment Registration</string>
+    <string name="dwr_member_register">Member Registration</string>
+
+
+    <!-- First screen -->
+    <string name="form_no">Form No<font color='#F44336'>*</font></string>
+    <string name="application_date">Application Date<font color='#F44336'>*</font></string>
+    <string name="branch">Branch<font color='#F44336'>*</font></string>
+    <string name="first_name">First Name<font color='#F44336'>*</font></string>
+    <string name="mobile_no">Mobile No.<font color='#F44336'>*</font></string>
+    <string name="dob">DOB<font color='#F44336'>*</font></string>
+    <string name="gender">Gender<font color='#F44336'>*</font></string>
+    <string name="annual_income">Annual Income<font color='#F44336'>*</font></string>
+    <string name="father_name">Father/Husband Name<font color='#F44336'>*</font></string>
+    <string name="marital_status">Marital Status<font color='#F44336'>*</font></string>
+    <string name="anniversary_date">Anniversary Date<font color='#F44336'>*</font></string>
+
+    <!-- Second Screen -->
+    <!-- Nominee Information     -->
+    <string name="nominee_full_name">Full Name<font color='#F44336'>*</font></string>
+    <string name="nominee_relationship">Relationship<font color='#F44336'>*</font></string>
+    <string name="nominee_mobile_no">Mobile No.<font color='#F44336'>*</font></string>
+
+    <!-- Third Screen -->
+    <!-- Residence Address -->
+    <string name="residence_address">Address<font color='#F44336'>*</font></string>
+    <string name="residence_state">State<font color='#F44336'>*</font></string>
+    <string name="residence_district">District<font color='#F44336'>*</font></string>
+    <string name="residence_city">City<font color='#F44336'>*</font></string>
+    <string name="residence_pincode">Pincode<font color='#F44336'>*</font></string>
+
+    <!-- ID Proof -->
+    <string name="id_proof_document_type">ID Proof Document Type<font color='#F44336'>*</font></string>
+    <string name="id_proof_id_no">ID No.<font color='#F44336'>*</font></string>
+    <string name="id_proof_address">Address<font color='#F44336'>*</font></string>
+
+    <!-- Address Proof -->
+    <string name="address_proof_select_id">Select ID<font color='#F44336'>*</font></string>
+    <string name="address_proof_id_no">ID No.<font color='#F44336'>*</font></string>
+    <string name="address_proof_address">Address<font color='#F44336'>*</font></string>
+
+    <!-- Fourth Screen -->
+    <!-- Form Details -->
+    <string name="form_detail_form_number">Form Number<font color='#F44336'>*</font></string>
+    <string name="form_detail_investment_plan">Investment Plan<font color='#F44336'>*</font></string>
+
+    <!-- Fifth Screen -->
+    <!-- First Nominee -->
+    <string name="first_nominee_full_name">Full Name<font color='#F44336'>*</font></string>
+    <string name="first_nominee_relationship">Relationship<font color='#F44336'>*</font></string>
+    <string name="first_nominee_dob">Nominee (DOB)<font color='#F44336'>*</font></string>
+    <string name="first_nominee_gender">Gender<font color='#F44336'>*</font></string>
+    <string name="first_nominee_percentage">Percentage<font color='#F44336'>*</font></string>
+
+    <!-- Second Nominee -->
+    <string name="second_nominee_full_name">Full Name<font color='#F44336'>*</font></string>
+    <string name="second_nominee_relationship">Relationship<font color='#F44336'>*</font></string>
+    <string name="second_nominee_dob">Nominee (DOB)<font color='#F44336'>*</font></string>
+    <string name="second_nominee_age">Age<font color='#F44336'>*</font></string>
+    <string name="second_nominee_gender">Gender<font color='#F44336'>*</font></string>
+    <string name="second_nominee_percentage">Percentage<font color='#F44336'>*</font></string>
+</resources>
