@@ -210,7 +210,7 @@ public class AssociateDetailsFragment extends Fragment implements Associate_Deta
                                 }
                                 for (int i = 0; i < memberList.size(); i++) {
                                     ArrayList<Associate_details_Child_model> child_models = new ArrayList<>();
-                                    id = String.valueOf(i + 1);
+                                    id = String.valueOf(parent_models.size() + 1);
                                     name = memberList.get(i).getAssociateName();
                                     member_id = memberList.get(i).getAssociateCode();
                                     child_models.add(new Associate_details_Child_model(
@@ -230,8 +230,6 @@ public class AssociateDetailsFragment extends Fragment implements Associate_Deta
                                             memberList.get(i).getNominee_age(),
                                             memberList.get(i).getEmail(),
                                             memberList.get(i).getMobile_no(),
-
-
                                             child_models));
                                 }
                                 listAdapter = new Associate_Details_ListAdapter(getActivity(), parent_models, AssociateDetailsFragment.this);

@@ -9,8 +9,8 @@ android {
         applicationId "com.associate.sbmfa"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 23
-        versionName "1.23"
+        versionCode 22
+        versionName "1.22"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

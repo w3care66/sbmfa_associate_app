@@ -98,7 +98,7 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
     ImageView imageViewBack;
 
     int lengthValue=15,page=1;
-            String planId ="";
+    String planId ="";
     SessionManager sessionManager;
     String member_id="",fromDateval="",toDateval="",associateId="";
     HashMap<String ,String > UserDataToken;
@@ -470,11 +470,12 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
         });
     }
 
-
+    int page_data_length;
     public  void getMemberList(final String member_id, int length, int page, String token, String assciateId, String fromDate, String toDate){
         googleProgressDialog.show1("Loading...");
         parent_models.clear();
 //       listAdapter.notifyDataSetChanged();
+
 
         if(page <= 0){
             page=1;
@@ -482,6 +483,9 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
         if(length <= 0){
             length=1;
         }
+
+        page_data_length = length;
+
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
         RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(page));
@@ -523,8 +527,10 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
                         }else {
                             next.setEnabled(false);
                         }
-                        int i=1;
+//                        int i= parent_models.size();
+
                         for (InvestmentlistingPlanDetailsMember memberItem : member) {
+                            int i = (page_data_length * (page - 1)) + (parent_models.size() + 1);
                             ArrayList<Investment_Plan_Details_child_model> child_models = new ArrayList<>();
                             child_models.clear();
                             child_models.add(new Investment_Plan_Details_child_model(memberItem.getId().toString(),memberItem.getMemberId(),memberItem.getMobileNumber(),memberItem.getAssociateCode(),memberItem.getAccountNumber(),memberItem.getTenure(),memberItem.getCurrentBalance(),memberItem.getEliAmount(),memberItem.getDepositeAmount(),memberItem.getState(),memberItem.getDistrict(),memberItem.getCity(),memberItem.getVillage(),memberItem.getPinCode(),memberItem.getFirstId(),memberItem.getSecondId(),memberItem.getAddress(),memberItem.getAssociateName(),memberItem.getPlan(),memberItem.getFormNumber(),memberItem.getCreatedAt()));
