@@ -321,8 +321,11 @@ public class AssociateCollectionFragment extends Fragment {
         final float scale = getResources().getDisplayMetrics().density;
         return (int) (pixels * scale + 0.5f);
     }
+
+    int page_data_length;
     void associate_data(int page,int length,String member_id,String branch_id,String startdate,String enddate,String associateId){
         googleProgressDialog.show1("Loading...");
+        page_data_length = length;
         RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
         RequestBody _branch_id = RequestBody.create(MediaType.parse("multipart/form-data"), branch_id);
@@ -341,9 +344,9 @@ public class AssociateCollectionFragment extends Fragment {
                             dialog.checkStatus();
                         }
                         parent_models.clear();
-                        googleProgressDialog.dismiss();
+
                         List<AssociateCollectionReportData> associateCollectionReportData=response.body().getResult().getBusinessReport();
-                        int i=1;
+//                        int i=1;
 
 
                         int totalcount = response.body().getResult().getTotalCount();
@@ -359,6 +362,7 @@ public class AssociateCollectionFragment extends Fragment {
                         for (AssociateCollectionReportData associateCollectionReportData1:associateCollectionReportData){
                             ArrayList<Associate_collection_details_child> child_models=new ArrayList<>();
                             child_models.clear();
+                            int i = (page_data_length * (page - 1)) + (parent_models.size() + 1);
                             child_models.add(new Associate_collection_details_child(associateCollectionReportData1.getBranch(),
                                     String.valueOf(associateCollectionReportData1.getBranchCode()),
                                     String.valueOf(associateCollectionReportData1.getDailyDenoSum()),
@@ -372,7 +376,7 @@ public class AssociateCollectionFragment extends Fragment {
                                     associateCollectionReportData1.getAssociateCode()
                             ));
                             parent_models.add(new Associate_Collection_parent_model(String.valueOf(i),associateCollectionReportData1.getAssociateName(),associateCollectionReportData1.getAssociateCode(),associateCollectionReportData1.getAssociateCode(),child_models));
-                            i++;
+//                            i++;
                         }
                         listAdapter = new AssociateCollection_Details_Adapter(getActivity(), parent_models);
                         expListView.setAdapter(listAdapter);
@@ -380,7 +384,7 @@ public class AssociateCollectionFragment extends Fragment {
                         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
                         int width = metrics.widthPixels;
                         expListView.setIndicatorBounds(width - GetPixelFromDips(40), width - GetPixelFromDips(10));
-
+                        googleProgressDialog.dismiss();
                     }else{
                         Toast.makeText(getActivity(), response.body().getMessages(), Toast.LENGTH_SHORT).show();
                         googleProgressDialog.dismiss();
@@ -403,7 +407,7 @@ public class AssociateCollectionFragment extends Fragment {
 
     }
     public  void getAssociateActiveList(final String assciate_no,String token){
-        googleProgressDialog.show1("Loading...");
+//        googleProgressDialog.show1("Loading...");
 
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), assciate_no);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
@@ -411,7 +415,7 @@ public class AssociateCollectionFragment extends Fragment {
         applicationsListResponesCall.enqueue(new Callback<AssociateMemberListResponse>() {
             @Override
             public void onResponse(Call<AssociateMemberListResponse> call, Response<AssociateMemberListResponse> response) {
-                googleProgressDialog.dismiss();
+//                googleProgressDialog.dismiss();
                 if (response != null) {
                     if (response.body().getCode() == 200) {
                           if (response.body().getAssociateStatus() == 0){
@@ -441,7 +445,7 @@ public class AssociateCollectionFragment extends Fragment {
 
             @Override
             public void onFailure(Call<AssociateMemberListResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
+//                googleProgressDialog.dismiss();
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });

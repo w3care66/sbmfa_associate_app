@@ -601,7 +601,7 @@ public class AssociateBusinessCompareReportFragment extends Fragment implements 
 //        });
 //}
 
-
+    int page_data_length;
     public void getMemberList(final String member_id, int length, int page, String token, String fromDate, String toDate, String comparefromDate, String comparetoDate) {
         googleProgressDialog.show1("Loading...");
         parent_models.clear();
@@ -613,6 +613,7 @@ public class AssociateBusinessCompareReportFragment extends Fragment implements 
         if (length <= 0) {
             length = 1;
         }
+        page_data_length = length;
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
         RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(page));
@@ -640,7 +641,7 @@ public class AssociateBusinessCompareReportFragment extends Fragment implements 
                         } else {
                             datanotfound.setVisibility(View.GONE);
                         }
-                        int i = 1;
+//                        int i = 1;
                         next.setEnabled(true);
 
                         int totalcount = response.body().getResult().getTotalCount();
@@ -653,6 +654,7 @@ public class AssociateBusinessCompareReportFragment extends Fragment implements 
                             next.setEnabled(false);
                         }
                         for (AssociateBusinessCompareReportBusinessSummaryReport memberItem : member) {
+                            int i = (page_data_length * (page - 1)) + (parent_models.size() + 1);
                             ArrayList<AssociateBusinessCompareChildModel> child_models = new ArrayList<>();
                             child_models.clear();
                             child_models.add(new AssociateBusinessCompareChildModel(
@@ -764,7 +766,7 @@ public class AssociateBusinessCompareReportFragment extends Fragment implements 
                                     memberItem.getResultTotalMember().toString()
                             ));
                             parent_models.add(new AssociateBusinessCompareParentModel(String.valueOf(i), memberItem.getName(), memberItem.getMemberId(), "", child_models));
-                            i++;
+//                            i++;
                         }
                         listAdapter.notifyDataSetChanged();
                     } else {

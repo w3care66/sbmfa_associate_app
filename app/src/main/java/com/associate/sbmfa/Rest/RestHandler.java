@@ -16,8 +16,8 @@ public class RestHandler {
 //    public static String BASE_URL1 = "http://my.samraddhbestwin.com/api/"; // Testing Server
 //    public static String BASE_URL1 = "http://my2.samraddhbestwin.com/api/"; // Testing Server
 
-//    public static String BASE_URL1 = "http://my.samraddhbestwin.com/api/"; // Live Server
-    public static String BASE_URL1 = "http://uatsamraddh.host4india.in/api/"; // Testing Server
+    public static String BASE_URL1 = "http://my.samraddhbestwin.com/api/"; // Live Server
+//    public static String BASE_URL1 = "http://uatsamraddh.host4india.in/api/"; // Testing Server
 
     public static ApiService getApiService()  {
         if (API_SERVICE == null) {

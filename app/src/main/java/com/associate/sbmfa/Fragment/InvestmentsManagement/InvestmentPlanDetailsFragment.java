@@ -427,14 +427,12 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
 
     }
     public  void getAssociateActiveList(final String assciate_no,String token){
-        googleProgressDialog.show1("Loading...");
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), assciate_no);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
         Call<AssociateMemberListResponse> applicationsListResponesCall = RestHandler.getApiService().Member_Associate_active_List_RESPONES_CALL(_assciate_no,_token);
         applicationsListResponesCall.enqueue(new Callback<AssociateMemberListResponse>() {
             @Override
             public void onResponse(Call<AssociateMemberListResponse> call, Response<AssociateMemberListResponse> response) {
-                googleProgressDialog.dismiss();
                 if (response != null) {
                     if (response.body().getCode() == 200) {
                           if (response.body().getAssociateStatus() == 0){
@@ -464,7 +462,6 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
 
             @Override
             public void onFailure(Call<AssociateMemberListResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });
@@ -498,7 +495,6 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
         applicationsListResponesCall.enqueue(new Callback<InvestmentlistingPlanDetailsResponse>() {
             @Override
             public void onResponse(Call<InvestmentlistingPlanDetailsResponse> call, Response<InvestmentlistingPlanDetailsResponse> response) {
-                googleProgressDialog.dismiss();
                 if (response.isSuccessful()) {
                     if (response.body().getCode() == 200) {
                         Log.e("ressss---",""+response.body().getMessages());
@@ -535,7 +531,7 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
                             child_models.clear();
                             child_models.add(new Investment_Plan_Details_child_model(memberItem.getId().toString(),memberItem.getMemberId(),memberItem.getMobileNumber(),memberItem.getAssociateCode(),memberItem.getAccountNumber(),memberItem.getTenure(),memberItem.getCurrentBalance(),memberItem.getEliAmount(),memberItem.getDepositeAmount(),memberItem.getState(),memberItem.getDistrict(),memberItem.getCity(),memberItem.getVillage(),memberItem.getPinCode(),memberItem.getFirstId(),memberItem.getSecondId(),memberItem.getAddress(),memberItem.getAssociateName(),memberItem.getPlan(),memberItem.getFormNumber(),memberItem.getCreatedAt()));
                             parent_models.add(new Investment_Plan_Details_parent_model(String.valueOf(i), memberItem.getMember(), memberItem.getAccountNumber(), String.valueOf(memberItem.getId()), child_models));
-                            i++;
+//                            i++;
                         }
                         listAdapter.notifyDataSetChanged();
                     } else {
@@ -543,24 +539,26 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
                         next.setEnabled(false);
                        // Toast.makeText(getActivity(), response.body().getMessages(), Toast.LENGTH_SHORT).show();
                     }
+                    googleProgressDialog.dismiss();
                 } else {
                     datanotfound.setVisibility(View.VISIBLE);
                     next.setEnabled(false);
+                    googleProgressDialog.dismiss();
                    // Toast.makeText(getActivity(), response.body().getMessages(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<InvestmentlistingPlanDetailsResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
+
                 datanotfound.setVisibility(View.VISIBLE);
                 next.setEnabled(false);
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
+                googleProgressDialog.dismiss();
             }
         });
     }
     public  void getBranchList(final String assciate_no, final String token){
-        googleProgressDialog.show1("Loading...");
 
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), assciate_no);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
@@ -568,7 +566,6 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
         applicationsListResponesCall.enqueue(new Callback<BranchResponse>() {
             @Override
             public void onResponse(Call<BranchResponse> call, Response<BranchResponse> response) {
-                googleProgressDialog.dismiss();
                 if (response != null) {
                     if (response.body().getCode() == 200) {
                           if (response.body().getAssociateStatus() == 0){
@@ -593,7 +590,6 @@ public class InvestmentPlanDetailsFragment extends Fragment  {
             }
             @Override
             public void onFailure(Call<BranchResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });

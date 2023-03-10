@@ -378,7 +378,7 @@ public class QuotaBusinessReportFragment extends Fragment {
         });
     }
 
-
+    int page_data_length;
     public  void getMemberList(final String member_id, int length, int page, String token, String assciateId, String fromDate, String toDate) {
             googleProgressDialog.show1("Loading...");
             quotaBusiness_Report_Parent_model.clear();
@@ -388,6 +388,7 @@ public class QuotaBusinessReportFragment extends Fragment {
             if (length <= 0) {
                 length = 1;
             }
+            page_data_length = length;
             RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
             RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(page));
@@ -423,10 +424,11 @@ public class QuotaBusinessReportFragment extends Fragment {
                                 }else {
                                     next.setEnabled(false);
                                 }
-                                int i = 1;
+//                                int i = 1;
                                 quotaBusiness_Report_Parent_model.clear();
 
                                 for (QoutaReport qoutaReportItem : qoutaReport) {
+                                    int i = (page_data_length * (page - 1)) + (quotaBusiness_Report_Parent_model.size() + 1);
                                     ArrayList<QuotaBusiness_Report_Child_model> child_models = new ArrayList<>();
                                     child_models.add(new QuotaBusiness_Report_Child_model(qoutaReportItem.getSector(),
                                             qoutaReportItem.getRegan(),
@@ -449,7 +451,7 @@ public class QuotaBusinessReportFragment extends Fragment {
                                             qoutaReportItem.getQuotaBusinessTargetTeamPercentage(),
                                             qoutaReportItem.getAchievedTargetTeamPercentage()));
                                     quotaBusiness_Report_Parent_model.add(new QuotaBusiness_Report_Parent_model(String.valueOf(i), qoutaReportItem.getAssociateName(), qoutaReportItem.getAssociateCode(), "", child_models));
-                                    i++;
+//                                    i++;
                                 }
                                 quotaBusinessReportAdapter.notifyDataSetChanged();
                             }else {

@@ -219,10 +219,12 @@ public class MaturityReportsFragment extends Fragment {
 
         return RootView;
     }
+    int page_data_length;
     private void getAssociateBusinessList(String member_id, String token, String pages, String langhts, String type) {
         try {
             googleProgressDialog.show1("Loading data....");
             parent_models.clear();
+            page_data_length = Integer.parseInt(langhts);
             RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
             RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), pages);
@@ -243,64 +245,73 @@ public class MaturityReportsFragment extends Fragment {
                                 AssociateStatusDialog dialog = new AssociateStatusDialog(getActivity());
                                 dialog.checkStatus();
                             }
-                            googleProgressDialog.dismiss();
+
                             imageButtonNext.setEnabled(true);
                             List<Maturity> maturity = response.body().getResult().getMaturity();
-                            int totalcount = response.body().getResult().getTotalCount();
-                            int lenght = Integer.parseInt(response.body().getResult().getLength());
-                            int page = Integer.parseInt(response.body().getResult().getPage());
-                            int clickButNxt = lenght * page;
-                            if (totalcount > clickButNxt) {
-                                imageButtonNext.setEnabled(maturity.size() == 15 ? true : false);
-                            } else {
-                                imageButtonNext.setEnabled(false);
-                            }
-                            int i = 0;
-                            for (Maturity item : maturity) {
-                                i++;
-                                ArrayList<AssociateMaturityReportChild_model> associateMaturityReportChild_models = new ArrayList<>();
-                                associateMaturityReportChild_models.add(new AssociateMaturityReportChild_model(
-                                        item.getId().toString(),
-                                        item.getBranch_code().toString(),
-                                        item.getBranch_name().toString(),
-                                        item.getAccount_no().toString(),
-                                        item.getMember_name().toString(),
-                                        item.getMember_id().toString(),
-                                        item.getPlan_name().toString(),
-                                        item.getDeno().toString(),
-                                        item.getMaturity_amount().toString(),
-                                        item.getAssociate_code().toString(),
-                                        item.getAssociate_name().toString(),
-                                        item.getOpening_date().toString(),
+                            if(maturity.size() > 0){
+                                int totalcount = response.body().getResult().getTotalCount();
+                                int lenght = Integer.parseInt(response.body().getResult().getLength());
+                                int page = Integer.parseInt(response.body().getResult().getPage());
+                                int clickButNxt = lenght * page;
+                                if (totalcount > clickButNxt) {
+                                    imageButtonNext.setEnabled(maturity.size() == 15 ? true : false);
+                                } else {
+                                    imageButtonNext.setEnabled(false);
+                                }
+//                            int i = 0;
+                                for (Maturity item : maturity) {
+                                    int i = (page_data_length * (page - 1)) + (parent_models.size() + 1);
+//                                i++;
+                                    ArrayList<AssociateMaturityReportChild_model> associateMaturityReportChild_models = new ArrayList<>();
+                                    associateMaturityReportChild_models.add(new AssociateMaturityReportChild_model(
+                                            item.getId().toString(),
+                                            item.getBranch_code().toString(),
+                                            item.getBranch_name().toString(),
+                                            item.getAccount_no().toString(),
+                                            item.getMember_name().toString(),
+                                            item.getMember_id().toString(),
+                                            item.getPlan_name().toString(),
+                                            item.getDeno().toString(),
+                                            item.getMaturity_amount().toString(),
+                                            item.getAssociate_code().toString(),
+                                            item.getAssociate_name().toString(),
+                                            item.getOpening_date().toString(),
 //                                        item.getDue_amount().toString(),
-                                        item.getTotal_amount().toString(),
-                                        item.getMaturity_payable_amount().toString(),
-                                        item.getTds_amount().toString(),
-                                        item.getDeposit_amount().toString(),
-                                        item.getInterest().toString(),
+                                            item.getTotal_amount().toString(),
+                                            item.getMaturity_payable_amount().toString(),
+                                            item.getTds_amount().toString(),
+                                            item.getDeposit_amount().toString(),
+                                            item.getInterest().toString(),
 //                                        item.getFinal_amount().toString(),
-                                        item.getMaturity_type().toString(),
-                                        item.getMaturity_date().toString(),
-                                        item.getTenure().toString(),
-                                        item.getStatus().toString(),
-                                        item.getPayment_mode().toString(),
-                                        item.getCheque_no().toString(),
-                                        item.getSsb_ac().toString(),
-                                        item.getBank_name().toString(),
-                                        item.getBank_ac().toString(),
-                                        item.getRtgs_chrg().toString(),
-                                        item.getPayment_date()));
+                                            item.getMaturity_type().toString(),
+                                            item.getMaturity_date().toString(),
+                                            item.getTenure().toString(),
+                                            item.getStatus().toString(),
+                                            item.getPayment_mode().toString(),
+                                            item.getCheque_no().toString(),
+                                            item.getSsb_ac().toString(),
+                                            item.getBank_name().toString(),
+                                            item.getBank_ac().toString(),
+                                            item.getRtgs_chrg().toString(),
+                                            item.getPayment_date()));
 
-                                parent_models.add(new AssociateMaturityReportParent_model(String.valueOf(i), item.getMember_name().toString(), item.getMember_id().toString(), associateMaturityReportChild_models));
+                                    parent_models.add(new AssociateMaturityReportParent_model(String.valueOf(i), item.getMember_name().toString(), item.getMember_id().toString(), associateMaturityReportChild_models));
+                                }
+                                listAdapter = new AssociateMaturityReportDetailsAdapter(getActivity(), parent_models);
+                                expListView.setAdapter(listAdapter);
+                                DisplayMetrics metrics = new DisplayMetrics();
+                                getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                                int width = metrics.widthPixels;
+                                expListView.setIndicatorBounds(width - GetPixelFromDips(40), width - GetPixelFromDips(10));
+                                googleProgressDialog.dismiss();
+                            } else {
+                                googleProgressDialog.dismiss();
+                                imageButtonNext.setEnabled(false);
+                                textViewNotFound.setVisibility(View.VISIBLE);
+                                textViewNotFound.setText("Data not found");
                             }
-                            listAdapter = new AssociateMaturityReportDetailsAdapter(getActivity(), parent_models);
-                            expListView.setAdapter(listAdapter);
-                            DisplayMetrics metrics = new DisplayMetrics();
-                            getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-                            int width = metrics.widthPixels;
-                            expListView.setIndicatorBounds(width - GetPixelFromDips(40), width - GetPixelFromDips(10));
-
                         } else {
+                            googleProgressDialog.dismiss();
                             imageButtonNext.setEnabled(false);
                             textViewNotFound.setVisibility(View.VISIBLE);
                             textViewNotFound.setText("Data not found");

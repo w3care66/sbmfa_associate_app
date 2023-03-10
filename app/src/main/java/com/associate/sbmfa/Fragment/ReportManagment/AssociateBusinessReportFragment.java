@@ -348,10 +348,11 @@ public class AssociateBusinessReportFragment extends Fragment {
         });
         return RootView;
     }
-
+    int page_data_length;
     private void getAssociateBusinessList(String member_id, String token, String pages, String langhts, String branch_id, String start_date, String end_date, String associateId) {
         googleProgressDialog.show1("Loading data....");
         parent_models.clear();
+        page_data_length = Integer.parseInt(langhts);
         RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
         RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), pages);
@@ -397,7 +398,7 @@ public class AssociateBusinessReportFragment extends Fragment {
                             expListView.setVisibility(View.VISIBLE);
                             for (int i = 0; i < members.size(); i++) {
                                 ArrayList<AssociateBusinessReportChild_model> child_models = new ArrayList<>();
-                                id = String.valueOf(i + 1);
+                                id = String.valueOf((page_data_length * (page - 1)) + (parent_models.size() + 1));
                                 name = members.get(i).getName();
                                 member_id = String.valueOf(members.get(i).getMemberId());
                                 child_models.add(new AssociateBusinessReportChild_model(
@@ -777,7 +778,7 @@ public class AssociateBusinessReportFragment extends Fragment {
     }
 
     public void getAssociateActiveList(final String assciate_no, String token) {
-        googleProgressDialog.show1("Loading...");
+//        googleProgressDialog.show1("Loading...");
 
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), assciate_no);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
@@ -785,7 +786,7 @@ public class AssociateBusinessReportFragment extends Fragment {
         applicationsListResponesCall.enqueue(new Callback<AssociateMemberListResponse>() {
             @Override
             public void onResponse(Call<AssociateMemberListResponse> call, Response<AssociateMemberListResponse> response) {
-                googleProgressDialog.dismiss();
+//                googleProgressDialog.dismiss();
                 if (response != null) {
                     if (response.body().getCode() == 200) {
                         if (response.body().getAssociateStatus() == 0) {
@@ -815,7 +816,7 @@ public class AssociateBusinessReportFragment extends Fragment {
 
             @Override
             public void onFailure(Call<AssociateMemberListResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
+//                googleProgressDialog.dismiss();
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });
@@ -864,6 +865,7 @@ public class AssociateBusinessReportFragment extends Fragment {
 
     private void getAssociateBusinessList1(String member_id, String token, String pages, String langhts, String branch_id, String start_date, String end_date, String associateId) {
         googleProgressDialog.show1("Loading data....");
+
         final ArrayList<AssociateBusinessReportParent_model> parentmodels = new ArrayList<>();
         RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);

@@ -277,7 +277,7 @@ public class InvestmentCommisionDetailsFragment extends Fragment {
 
         }
     }
-
+    int page_data_length;
     public void getMemberList(final String member_id, int length, int page, String token, String leger_id, String member_idd) {
         try {
             googleProgressDialog.show1("Loading...");
@@ -289,6 +289,8 @@ public class InvestmentCommisionDetailsFragment extends Fragment {
             if (length <= 0) {
                 length = 1;
             }
+
+            page_data_length = length;
             // Toast.makeText(getActivity(), leger_id, Toast.LENGTH_SHORT).show();
             RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
@@ -317,7 +319,7 @@ public class InvestmentCommisionDetailsFragment extends Fragment {
                                 expListView.setVisibility(View.VISIBLE);
                                 next.setEnabled(true);
                             }
-                            int i = 1;
+//                            int i = 1;
                             int totalcount = response.body().getResult().getTotalCount();
                             int lenght = Integer.parseInt(response.body().getResult().getLength());
                             int page = Integer.parseInt(response.body().getResult().getPage());
@@ -329,11 +331,12 @@ public class InvestmentCommisionDetailsFragment extends Fragment {
                             }
                             investmentCommisionParentModels.clear();
                             for (InvestmentCommission item : investmentCommissions) {
+                                int i = (page_data_length * (page - 1)) + (investmentCommisionParentModels.size() + 1);
                                 ArrayList<InvestmentCommisionChildModel> investmentCommisionChildModels = new ArrayList<>();
                                 investmentCommisionChildModels.clear();
                                 investmentCommisionChildModels.add(new InvestmentCommisionChildModel(item.getCreatedAt(), item.getInvestmentAccount(), item.getPlanName(), item.getTotalAmount(), item.getCommissionAmount(), item.getPercentage(), item.getCarderName(), item.getEmiNo(), item.getTotalAmount(), item.getCommissionType(), item.getAssociateExist(), item.getPayType(), item.getIsDistribute()));
                                 investmentCommisionParentModels.add(new InvestmentCommisionParentModel(String.valueOf(i), item.getCreatedAt(), item.getInvestmentAccount(), item.getPlanName(), investmentCommisionChildModels));
-                                i++;
+//                                i++;
                             }
                             listAdapter.notifyDataSetChanged();
                         } else {

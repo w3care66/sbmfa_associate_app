@@ -265,14 +265,13 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
         dateStrings.clear();
         dateStrings.add("Select Commission Ledger");
         lager_id_arr.add("00");
-        googleProgressDialog.show1("Loading Data...");
+
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), assciate_no);
         RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
         Call<MemberLegerResponse> applicationsListResponesCall = RestHandler.getApiService().Member_Leger_List_RESPONES_CALL(_assciate_no, _token);
         applicationsListResponesCall.enqueue(new Callback<MemberLegerResponse>() {
             @Override
             public void onResponse(Call<MemberLegerResponse> call, Response<MemberLegerResponse> response) {
-                googleProgressDialog.dismiss();
                 if (response != null) {
                     if (response.body().getCode() == 200) {
                         if (response.body().getAssociateStatus() == 0) {
@@ -320,12 +319,12 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
 
             @Override
             public void onFailure(Call<MemberLegerResponse> call, Throwable t) {
-                googleProgressDialog.dismiss();
                 Toast.makeText(getActivity(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    int page_data_length;
     public void getMemberList(final String member_id, int length, int page, String token, final String leger_id) {
         googleProgressDialog.show1("Loading ...");
         parent_models.clear();
@@ -335,6 +334,8 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
         if (length <= 0) {
             length = 1;
         }
+
+        page_data_length = length;
         // Toast.makeText(getActivity(), leger_id, Toast.LENGTH_SHORT).show();
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
@@ -368,7 +369,7 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
                             next.setEnabled(false);
                             textViewNotFound.setVisibility(View.VISIBLE);
                         }
-                        int i = 1;
+//                        int i = 1;
                         int totalcount = response.body().getResult().getTotalCount();
                         int lenght = Integer.parseInt(response.body().getResult().getLength());
                         int page = Integer.parseInt(response.body().getResult().getPage());
@@ -380,6 +381,7 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
                         }
                         Associate_Commission_details_Parent_models.clear();
                         for (AssociateCom associateComItem : associateCom) {
+                            int i = (page_data_length * (page - 1)) + (Associate_Commission_details_Parent_models.size() + 1);
                             ArrayList<Associate_Commission_details_Child_Model> Associate_Commission_details_Child_Models = new ArrayList<>();
                             Associate_Commission_details_Child_Models.clear();
                             Associate_Commission_details_Child_Models.add(new Associate_Commission_details_Child_Model(associateComItem.getAssociate_name(), associateComItem.getAssociate_no(), associateComItem.getAssociate_carder(), associateComItem.getBranch_name(), associateComItem.getBranch_code().toString(), associateComItem.getTotal_amount(), associateComItem.getLedger_id().toString(),
@@ -396,7 +398,7 @@ public class AssociateCommissiondetails extends Fragment implements AssociateCom
 
 
                             Associate_Commission_details_Parent_models.add(new Associate_Commission_details_Parent_model(String.valueOf(i), associateComItem.getAssociate_name(), associateComItem.getAssociate_no(), "", Associate_Commission_details_Child_Models));
-                            i++;
+//                            i++;
                         }
                         listAdapter.notifyDataSetChanged();
                     } else {

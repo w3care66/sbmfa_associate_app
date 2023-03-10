@@ -174,10 +174,12 @@ public class AssociateDetailsFragment extends Fragment implements Associate_Deta
         return Rootview;
     }
 
+    int page_data_length;
     private void getAssociateList(final String member_id, String token, String page, String length) {
         try {
             googleProgressDialog.show1("Loading data....");
             parent_models.clear();
+            page_data_length = Integer.parseInt(length);
             RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
             RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), page);
@@ -210,7 +212,8 @@ public class AssociateDetailsFragment extends Fragment implements Associate_Deta
                                 }
                                 for (int i = 0; i < memberList.size(); i++) {
                                     ArrayList<Associate_details_Child_model> child_models = new ArrayList<>();
-                                    id = String.valueOf(parent_models.size() + 1);
+//                                    id = String.valueOf(parent_models.size() + 1);
+                                    id = String.valueOf((page_data_length * (page - 1)) + (parent_models.size() + 1));
                                     name = memberList.get(i).getAssociateName();
                                     member_id = memberList.get(i).getAssociateCode();
                                     child_models.add(new Associate_details_Child_model(

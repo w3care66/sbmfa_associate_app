@@ -458,7 +458,7 @@ public class MemberMangementFragment extends Fragment implements AssociateCommis
         });
     }
 
-
+    int page_data_length;
     public void getMemberList(final String member_id, int length, int page, String token, String assciateId, String fromDate, String toDate) {
         googleProgressDialog.show1("Loading...");
         parent_models.clear();
@@ -469,6 +469,7 @@ public class MemberMangementFragment extends Fragment implements AssociateCommis
         if (length <= 0) {
             length = 1;
         }
+        page_data_length = length;
         RequestBody _assciate_no = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
         RequestBody _length = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(length));
         RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), String.valueOf(page));
@@ -508,14 +509,15 @@ public class MemberMangementFragment extends Fragment implements AssociateCommis
                         } else {
                             next.setEnabled(false);
                         }
-                        int i = 1;
+//                        int i = 1;
                         for (Member memberItem : member) {
+                            int i = (page_data_length * (page - 1)) + (parent_models.size() + 1);
                             ArrayList<Member_Mangemanet_Child_model> child_models = new ArrayList<>();
                             child_models.clear();
                             child_models.add(new Member_Mangemanet_Child_model(memberItem.getId().toString(), memberItem.getMemberJoinDate(), memberItem.getBranchCode().toString(), memberItem.getBranchName(), memberItem.getSectorName(), memberItem.getMemberId(), memberItem.getName(), memberItem.getAssociateCode(), memberItem.getAssociateName(), memberItem.getAddress(), memberItem.getFirstId(), memberItem.getSecondId()));
                             parent_models.add(new Member_Mangement_Parent_models(String.valueOf(i), memberItem.getName(), memberItem.getMemberId(), "", child_models));
 
-                            i++;
+//                            i++;
 
                         }
                         listAdapter.notifyDataSetChanged();

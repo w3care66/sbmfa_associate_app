@@ -338,11 +338,12 @@ public class BusinessSummaryReportFragment extends Fragment {
         });
         return RootView;
     }
-
+    int page_data_length;
     private void getAssociateBusinessList(String member_id, String token, String pages, String langhts, String fromDate, String toDate, String branch_id, String associateId) {
         try {
             googleProgressDialog.show1("Loading data....");
             parent_models.clear();
+            page_data_length = Integer.parseInt(langhts);
             RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
             RequestBody _page = RequestBody.create(MediaType.parse("multipart/form-data"), pages);
@@ -390,7 +391,7 @@ public class BusinessSummaryReportFragment extends Fragment {
                                 }
                                 for (int i = 0; i < members.size(); i++) {
                                     ArrayList<AssociateBusinessSummaryReportChild> child_models = new ArrayList<>();
-                                    id = String.valueOf(i + 1);
+                                    id = String.valueOf((page_data_length * (page - 1)) + (parent_models.size() + 1));
                                     name = members.get(i).getName();
                                     member_id = String.valueOf(members.get(i).getMemberId());
                                     child_models.add(new AssociateBusinessSummaryReportChild(
@@ -624,10 +625,10 @@ public class BusinessSummaryReportFragment extends Fragment {
         return (int) (pixels * scale + 0.5f);
     }
 
-
     private void getAssociateBusinessList1(String member_id, String token, String pages, String langhts, String fromDate, String toDate, String branch_id, String associateId) {
         try {
             googleProgressDialog.show1("Loading data....");
+
             final ArrayList<AssociateBusinessSummaryReportParent> parentmodels = new ArrayList<>();
             RequestBody _member_id = RequestBody.create(MediaType.parse("multipart/form-data"), member_id);
             RequestBody _token = RequestBody.create(MediaType.parse("multipart/form-data"), token);
